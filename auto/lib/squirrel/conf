@@ -1,0 +1,15 @@
+
+# Copyright (C) Ngwsx
+
+
+SQUIRREL="$ngx_addon_dir/../../../lib/squirrel"
+
+if [ "$NGX_PLATFORM" != win32 ]; then
+    SQUIRREL_LIBS="-L$SQUIRREL/libs/unix -lsquirrel -lsqstdlib"
+else
+    SQUIRREL_LIBS=" \
+        $SQUIRREL/libs/win32/squirrel.lib \
+        $SQUIRREL/libs/win32/sqstdlib.lib"
+fi
+
+SQUIRREL_INCS="$SQUIRREL/incs"

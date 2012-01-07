@@ -1,0 +1,204 @@
+
+# Copyright (C) Ngwsx
+
+
+NGX_SQU_MODULE="ngx_squ_module"
+NGX_SQU_INCS=" \
+    $ngx_addon_dir/src/core \
+    $ngx_addon_dir/src/core/modules"
+NGX_SQU_DEPS="$ngx_addon_dir/src/core/ngx_squ.h"
+NGX_SQU_SRCS=" \
+    $ngx_addon_dir/src/core/ngx_squ.c \
+    $ngx_addon_dir/src/core/ngx_squ_cache.c \
+    $ngx_addon_dir/src/core/ngx_squ_debug.c \
+    $ngx_addon_dir/src/core/ngx_squ_module.c \
+    $ngx_addon_dir/src/core/ngx_squ_parser.c"
+
+
+NGX_SQU_HTTP_MODULE="ngx_squ_http_module"
+NGX_SQU_HTTP_INCS=" \
+    $ngx_addon_dir/src/http \
+    $ngx_addon_dir/src/http/modules"
+NGX_SQU_HTTP_DEPS="$ngx_addon_dir/src/http/ngx_squ_http_module.h"
+NGX_SQU_HTTP_SRCS="$ngx_addon_dir/src/http/ngx_squ_http_module.c"
+
+NGX_SQU_HTTP_LOG_MODULE="ngx_squ_http_log_module"
+NGX_SQU_HTTP_LOG_INCS=" \
+    $ngx_addon_dir/src/http \
+    $ngx_addon_dir/src/http/modules"
+NGX_SQU_HTTP_LOG_DEPS="$ngx_addon_dir/src/http/ngx_squ_http_module.h"
+NGX_SQU_HTTP_LOG_SRCS="$ngx_addon_dir/src/http/ngx_squ_http_log_module.c"
+
+
+NGX_SQU_TCP_MODULES=" \
+    ngx_tcp_module \
+    ngx_tcp_core_module \
+    ngx_squ_tcp_module"
+NGX_SQU_TCP_INCS=" \
+    $ngx_addon_dir/../ngx_tcp_module/src \
+    $ngx_addon_dir/src/tcp"
+NGX_SQU_TCP_DEPS=" \
+    $ngx_addon_dir/../ngx_tcp_module/src/ngx_tcp.h \
+    $ngx_addon_dir/src/tcp/ngx_squ_tcp_module.h"
+NGX_SQU_TCP_SRCS=" \
+    $ngx_addon_dir/../ngx_tcp_module/src/ngx_tcp.c \
+    $ngx_addon_dir/../ngx_tcp_module/src/ngx_tcp_core_module.c \
+    $ngx_addon_dir/../ngx_tcp_module/src/ngx_tcp_handler.c \
+    $ngx_addon_dir/src/tcp/ngx_squ_tcp_module.c"
+
+
+NGX_SQU_UDP_MODULES=" \
+    ngx_udp_module \
+    ngx_udp_core_module \
+    ngx_udp_proxy_module \
+    ngx_squ_udp_module"
+NGX_SQU_UDP_INCS=" \
+    $ngx_addon_dir/../ngx_udp_module/src \
+    $ngx_addon_dir/src/udp"
+NGX_SQU_UDP_DEPS=" \
+    $ngx_addon_dir/../ngx_udp_module/src/ngx_udp.h \
+    $ngx_addon_dir/src/udp/ngx_squ_udp_module.h"
+NGX_SQU_UDP_SRCS=" \
+    $ngx_addon_dir/../ngx_udp_module/src/ngx_udp.c \
+    $ngx_addon_dir/../ngx_udp_module/src/ngx_udp_core_module.c \
+    $ngx_addon_dir/../ngx_udp_module/src/ngx_udp_handler.c \
+    $ngx_addon_dir/../ngx_udp_module/src/ngx_udp_proxy_module.c \
+    $ngx_addon_dir/src/udp/ngx_squ_udp_module.c"
+
+
+NGX_SQU_UDT_MODULES=" \
+    ngx_udt_epoll_module \
+    ngx_udt_select_module \
+    ngx_udt_module \
+    ngx_udt_core_module \
+    ngx_squ_udt_module"
+NGX_SQU_UDT_INCS=" \
+    $ngx_addon_dir/../ngx_udt_module/src \
+    $ngx_addon_dir/src/udt"
+NGX_SQU_UDT_DEPS=" \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt.h \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_socket.h \
+    $ngx_addon_dir/src/udt/ngx_squ_udt_module.h"
+NGX_SQU_UDT_SRCS=" \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_epoll_module.cpp \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_select_module.cpp \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_socket.cpp \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt.c \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_core_module.c \
+    $ngx_addon_dir/../ngx_udt_module/src/ngx_udt_handler.c \
+    $ngx_addon_dir/src/udt/ngx_squ_udt_module.c"
+
+
+NGX_SQU_AUTORUN_MODULE="ngx_squ_autorun_module"
+NGX_SQU_AUTORUN_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_autorun_module.c"
+
+
+NGX_SQU_AXIS2C_MODULE="ngx_squ_axis2c_module"
+NGX_SQU_AXIS2C_DEPS="$ngx_addon_dir/src/core/modules/ngx_squ_axis2c.h"
+NGX_SQU_AXIS2C_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_axis2c.c"
+
+NGX_SQU_AXIS2C_WS_MODULE="ngx_squ_axis2c_ws_module"
+NGX_SQU_AXIS2C_WS_SRCS=" \
+    $ngx_addon_dir/src/core/modules/ngx_squ_axis2c_ws_module.c"
+
+NGX_SQU_AXIS2C_XML_MODULE="ngx_squ_axis2c_xml_module"
+NGX_SQU_AXIS2C_XML_SRCS=" \
+    $ngx_addon_dir/src/core/modules/ngx_squ_axis2c_xml_module.c"
+
+
+NGX_SQU_BTT_MODULE="ngx_squ_btt_module"
+NGX_SQU_BTT_DEPS="$ngx_addon_dir/src/core/modules/ngx_squ_btt.h"
+NGX_SQU_BTT_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_btt.c"
+
+
+NGX_SQU_DAHUA_MODULE="ngx_squ_dahua_module"
+NGX_SQU_DAHUA_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_dahua_module.c"
+
+
+NGX_SQU_DBD_INCS="$ngx_addon_dir/../ngx_dbd_module/src"
+NGX_SQU_DBD_DEPS="$ngx_addon_dir/../ngx_dbd_module/src/ngx_dbd.h"
+NGX_SQU_DBD_SRCS="$ngx_addon_dir/../ngx_dbd_module/src/ngx_dbd.c"
+
+NGX_SQU_DBD_MODULE="ngx_squ_dbd_module"
+NGX_SQU_DBD_MODULE_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_dbd_module.c"
+
+NGX_SQU_DBD_LIBDRIZZLE_MODULE="ngx_squ_dbd_libdrizzle_module"
+NGX_SQU_DBD_LIBDRIZZLE_SRCS=" \
+    $ngx_addon_dir/../ngx_dbd_module/src/ngx_dbd_libdrizzle.c \
+    $ngx_addon_dir/src/core/modules/ngx_squ_dbd_libdrizzle_module.c"
+
+NGX_SQU_DBD_SQLITE3_MODULE="ngx_squ_dbd_sqlite3_module"
+NGX_SQU_DBD_SQLITE3_SRCS=" \
+    $ngx_addon_dir/../ngx_dbd_module/src/ngx_dbd_sqlite3.c \
+    $ngx_addon_dir/src/core/modules/ngx_squ_dbd_sqlite3_module.c"
+
+
+NGX_SQU_FILE_MODULE="ngx_squ_file_module"
+NGX_SQU_FILE_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_file_module.c"
+
+
+NGX_SQU_LOGGER_MODULE="ngx_squ_logger_module"
+NGX_SQU_LOGGER_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_logger_module.c"
+
+
+NGX_SQU_SMTP_MODULE="ngx_squ_smtp_module"
+NGX_SQU_SMTP_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_smtp_module.c"
+
+
+NGX_SQU_SOCKET_MODULE="ngx_squ_socket_module"
+NGX_SQU_SOCKET_SRCS="$ngx_addon_dir/src/core/modules/ngx_squ_socket_module.c"
+
+
+NGX_SQU_UTILS_MODULE="ngx_squ_utils_module"
+NGX_SQU_UTILS_SRCS=" \
+    $ngx_addon_dir/src/core/modules/ngx_squ_http.c \
+    $ngx_addon_dir/src/core/modules/ngx_squ_utils_module.c"
+
+
+NGX_SQU_HTTP_REQUEST_MODULE="ngx_squ_http_request_module"
+NGX_SQU_HTTP_REQUEST_SRCS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_request_module.c"
+
+NGX_SQU_HTTP_RESPONSE_MODULE="ngx_squ_http_response_module"
+NGX_SQU_HTTP_RESPONSE_SRCS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_response_module.c"
+
+NGX_SQU_HTTP_SESSION_MODULE="ngx_squ_http_session_module"
+NGX_SQU_HTTP_SESSION_DEPS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_session.h"
+NGX_SQU_HTTP_SESSION_SRCS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_session.c \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_session_module.c"
+
+NGX_SQU_HTTP_VARIABLE_MODULE="ngx_squ_http_variable_module"
+NGX_SQU_HTTP_VARIABLE_SRCS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_variable_module.c"
+
+NGX_SQU_HTTP_BTT_MODULE="ngx_squ_http_btt_module"
+NGX_SQU_HTTP_BTT_SRCS=" \
+    $ngx_addon_dir/src/http/modules/ngx_squ_http_btt_module.c"
+
+NGX_SQU_TCP_REQUEST_MODULE="ngx_squ_tcp_request_module"
+NGX_SQU_TCP_REQUEST_SRCS="$ngx_addon_dir/src/tcp/ngx_squ_tcp_request_module.c"
+
+NGX_SQU_TCP_RESPONSE_MODULE="ngx_squ_tcp_response_module"
+NGX_SQU_TCP_RESPONSE_SRCS=" \
+    $ngx_addon_dir/src/tcp/ngx_squ_tcp_response_module.c"
+
+
+NGX_SQU_UDP_REQUEST_MODULE="ngx_squ_udp_request_module"
+NGX_SQU_UDP_REQUEST_SRCS="$ngx_addon_dir/src/udp/ngx_squ_udp_request_module.c"
+
+NGX_SQU_UDP_BTT_MODULE="ngx_squ_udp_btt_module"
+NGX_SQU_UDP_BTT_SRCS="$ngx_addon_dir/src/udp/ngx_squ_udp_btt_module.c"
+
+
+NGX_SQU_UDT_REQUEST_MODULE="ngx_squ_udt_request_module"
+NGX_SQU_UDT_REQUEST_SRCS="$ngx_addon_dir/src/udt/ngx_squ_udt_request_module.c"
+
+NGX_SQU_UDT_RESPONSE_MODULE="ngx_squ_udt_response_module"
+NGX_SQU_UDT_RESPONSE_SRCS=" \
+    $ngx_addon_dir/src/udt/ngx_squ_udt_response_module.c"
+
+NGX_SQU_UDT_BTT_MODULE="ngx_squ_udt_btt_module"
+NGX_SQU_UDT_BTT_SRCS="$ngx_addon_dir/src/udt/ngx_squ_udt_btt_module.c"

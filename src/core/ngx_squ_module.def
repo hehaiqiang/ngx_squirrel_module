@@ -1,0 +1,4 @@
+LIBRARY
+
+EXPORTS
+ngx_squ_get_modules
